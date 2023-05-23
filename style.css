@@ -1,0 +1,458 @@
+@import url('https://fonts.googleapis.com/css2?family=Anek+Gujarati:wght@500&display=swap');
+
+
+/* กำหนดค่าเริ่มต้นของ web */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Anek Gujarati', sans-serif;
+    scroll-behavior: smooth;
+    list-style: none;
+    text-decoration: none;
+    scroll-padding-top: 2rem;
+    
+}
+
+
+body{
+    position: relative;
+}
+
+/* กำหนดตำแหน่ง navigation */
+.nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100vw;
+    position: fixed;
+    padding: 8px 40px;
+    color: #fff;
+    z-index: 99999;
+}
+
+/* กำหนด background สีอักษร ของ nav ตอนเลื่อนลงมา */
+.shadow{
+    background-color: #fff;
+}
+
+
+
+.shadow .nav-item a{
+    color: black;
+}
+
+.shadow .home{
+    color: black;
+}
+
+/* จัด ul ให้กระจายตัว */
+.nav-contain{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    width: 30%;
+    justify-content: space-between;
+}
+
+.nav-item a{
+    color: #fff;
+    text-decoration-line: none;
+}
+/* ให้ Menubar ไม่แสดง */
+.nav-item:last-child{
+    display: none;
+}
+.nav div h1 a{
+    color: #fff;
+}
+
+.nav-item:hover{
+    transform: scale(1.2,1.2);
+    border-bottom: 2px solid red;
+}
+
+/* กำหนดขนาดให้หน้าปกตัวเลื่อนให้เต็มจอ */
+.image-container{
+    min-width: 100vw;
+    min-height: 640px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: rgb(2,3,7,0.4);
+    color: #fff;
+    cursor: default;
+
+}
+
+
+.header-content{
+    margin-left: 10%;
+    font-size: 30px;
+}
+
+.header-content h1{
+    font-size: 80px;
+    cursor: default;
+}
+
+.header-content h1,.header-content h5{
+    cursor: default;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* กำหนดรูปภาพที่เลื่อน */
+.img-header{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: -1;
+}
+/* กำหนดขนาดของ กรอบตัวเลื่อน */
+.carousel{
+    width: 100%;
+    min-height: 640px;
+    overflow: hidden;
+    position: relative;
+}
+/* ตัวที่เลื่อน */
+.carousel-container{
+    display: flex;
+    transform: translateX(0);
+    transition: 2s ease-in-out;
+}
+/* กำหนดตำแหน่งของ 4 จุด */
+.index{
+    width: 100vw;
+    height: 3px;
+    position: absolute;
+    z-index: 20;
+    top: 90%;
+    display: flex;
+    justify-content: center;
+
+
+}
+/* กำหนดขนาดของ 4 จุด */
+.index-item{
+    padding: 1px;
+    background-color: #bbb;
+    margin: 0 5px;
+    cursor: pointer;
+    border: transparent solid 3px;
+    border-radius: 50%;
+}
+
+/* ให้เปลี่ยนสี เมื่อ ชี้หรือ ถึงหน้านั้น */
+.active ,.index-item:hover{
+    background-color: red;
+}
+
+/* กำหนดสีปุ่มทุกปุ่ม */
+.btn{
+    color: #fff;
+    text-decoration-line: none;
+    background-color: red;
+    border-radius: 10px;
+    font-size: 18px;
+    padding: 8px 25px;
+    cursor: pointer;
+}
+
+.btn:hover{
+    background-color: black;
+    padding: 9px 26px;
+    transition: 0.5s;
+}
+
+/* กำหนดระยะห่างจากขอบ */
+.movies{
+    background-color: black;
+    padding: 50px 0;
+}
+
+/* กำหนดขนาดของเนื้อหา */
+#movies{
+    margin: 0 auto;
+    max-width: 1098px;
+    padding: 0 50px;
+}
+
+/* กำหนดวิธีการจัดเรียงของเนื้อหา */
+.movies-contain{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(180px,auto));
+    gap: 10px;
+}
+
+/* กำหนดระยะห่างแต่ละตัว */
+.movie-contain{
+    color: #fff;
+    margin: 0 8px;
+}
+
+/* กำหนดปกภาพ */
+.movie-image{
+    height: 270px;
+    object-fit: cover;
+    width: 100%;
+    max-width: 200px;
+    object-position: center;
+}
+
+.movie-image:hover{
+    transform: translate(0,-10px);
+    transition: 0.5s;
+}
+
+
+.content-title{
+    border-bottom: 5px red solid; 
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+
+.footer{
+    max-width: 1089px;
+    color: #fff;
+    margin: 0 auto;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+
+.subscribe {
+    margin-bottom: 40px;
+}
+
+.letter{
+    position: relative;
+}
+
+.letter input{
+    font-size: 18px;
+    width: 30vw;
+    min-width: 350px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.letter .btn{
+    position: absolute;
+    top: 3.5px;
+    right: 3.5px;
+}
+
+.social{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+    padding: 0px 40px;
+    align-items: center;
+}
+
+
+.social ul{
+    display: flex;
+    list-style: none;
+}
+
+
+.social ul li a{
+    display: flex;
+    justify-content: center;
+    color: red;
+    font-size: 30px;
+    background-color: #fff;
+    border-radius: 100%;
+    padding: 8px;
+    margin: 0 10px;
+    border: 5px solid grey;
+}
+
+.social ul li a:hover{
+    background-color: red;
+    color: #fff;
+    transition: 0.5s;
+}
+
+/* กำหนดสไตล์ของตัว scroll */
+
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: red; 
+}
+
+/* ทำ responsive ของ nav */
+  
+@media screen and (max-width: 900px) {
+    /* .nav-item:not(:last-child) {display: none;} */
+    .nav-item:last-child {
+        display: block;
+        position: absolute;
+        top: -40px;
+        right: 49%;
+    }
+    .nav-contain{
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+        justify-content: center;
+        position: absolute;
+        top: 100%;
+        background-color: #fff;width: 100%;
+        
+    }
+    .nav-item.start{
+        display: none;
+    }
+    .social{
+        flex-direction: column;
+    }
+    .letter .btn{
+        position: relative
+    }
+    .letter{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    
+}
+
+/* modal แสดงตัวอย่างหนัง */
+
+.cover-content{
+    display: none;
+    position: fixed; /* Stay in place */
+    z-index: 999999; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.6); /* Black w/ opacity */
+}
+
+.content-movie{
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    background-color: black;
+    color: #fff;
+}
+
+
+.image-show{
+    width: 100%;
+    object-fit: cover;
+    height: 400px;
+    
+}
+
+.video-show{
+    height: 400px;
+    background-color: black;
+    position: relative;
+    
+}
+
+.video-show span{
+    position: absolute;
+    top: 2%;
+    left: 2%;
+    cursor: pointer;
+    z-index: 9999;
+    padding: 5px 10px;
+    border-radius: 8px;
+}
+
+.video-show span:hover{
+    background-color: rgb(60, 60, 60);
+}
+.video-show span:active{
+    background-color: rgb(126, 126, 126);
+}
+.video-show div {
+    height: 400px;
+    
+}
+
+.video-show h3{
+    position: absolute;
+    top: 80%;
+    left: 5%;
+}
+
+.title{
+    margin: 30px 40px;
+    padding-bottom: 50px ;
+}
+
+/* ทำ responsive โทรศัพท์ */
+
+@media screen and (max-width:581px) {
+    .movie-item{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        align-self: center;
+
+    }
+    .nav{
+        justify-content: space-between;
+    }
+
+    .nav div h1 ,nav p a{
+        font-size: 20px;
+    }
+    .nav-item:last-child {
+        display: block;
+        position: absolute;
+        top: -32px;
+        right: 49%;
+    }
+    .nav-contain{
+        left: 0;
+        
+    }
+}
+
+/* แก้ส่วนที่เป็น นักแสดงให้มี 4 คน */
+.ac{
+    height: 180px;
+    width: 140px;
+}
+
+.act{
+    grid-template-columns: repeat(auto-fit,minmax(140px,auto));
+
+}
+

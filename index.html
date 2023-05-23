@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies-web</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <!-- navigation -->
+    <div class="nav">
+        <div>
+            <h1><a href="#Home" class="home"><i class='bx bxs-camera-movie' ></i>PEEMovies</a></h1>
+        </div>
+
+        <ul class="nav-contain">
+            <li class="nav-item start"><a href="#movies">Movies</a></li>
+            <li class="nav-item start"><a href="#action">Action</a></li>
+            <li class="nav-item start"><a href="#comedy">Comedy</a></li>
+            <li class="nav-item start"><a href="#sci-fi">SCI-FI</a></li>
+            <li class="nav-item start"><a href="#thriller">Thriller</a></li>
+            <li class="nav-item"><a><i class='bx bx-menu' onclick="togglenav()"></i></a></li>
+        </ul>
+
+        <p><a href="https://www.imdb.com/registration/signin?ref=nv_generic_lgin&u=%2Ftrailers%2F" class="btn">Sign in</a></p>
+    </div>
+
+
+    <!-- Home Carousel  -->
+    <div class="carousel" id="Home"> 
+        <div class="carousel-container" id="carousel-container">
+            <div class="carousel-index">
+                <div class="image-container">
+                    <img src="https://images.hdqwalls.com/wallpapers/sylvester-stallone-in-escape-plan-2-hades-movie-4k-8b.jpg" alt="" class="img-header" style="cursor: pointer;">
+                    <div class="header-content">
+                        <h5>Action</h5>
+                        <h1>ESCAPE<br>PLAN</h1>
+                        <span class="btn" onclick="showmodal(1,2)">MOVIE TRAILER</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-index">
+                <div class="image-container">
+                    <img src="https://www.kwanmanie.com/wp-content/uploads/2021/08/Memories-of-Murder-1-1600x900-c-default.jpeg" alt="" class="img-header">
+                    <div class="header-content">
+                        <h5>Thriller</h5>
+                        <h1>MEMORISE OF <br>MURDER </h1>
+                        <span class="btn" onclick="showmodal(4,1)">MOVIE TRAILER</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-index">
+                <div class="image-container">
+                    <img src="https://static.euronews.com/articles/stories/07/48/30/08/1440x810_cmsv2_0d78395d-a608-5cdb-9725-3029c08d128f-7483008.jpg" alt="" class="img-header">
+                    <div class="header-content">
+                        <h5>Sci-Fi</h5>
+                        <h1>THE MATRIX</h1>
+                        <span class="btn" onclick="showmodal(3,1)">MOVIE TRAILER</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-index">
+                <div class="image-container">
+                    <img src="https://wallpaperaccess.com/full/2772795.jpg" alt="" class="img-header">
+                    <div class="header-content">
+                        <h5>Comedy</h5>
+                        <h1 style="font-size:100px">TED</h1>
+                        <span class="btn" onclick="showmodal(2,2)">MOVIE TRAILER</span>
+                    </div>
+                </div>
+            </div>
+
+            
+
+        </div>
+
+        <div class="index" id="index">
+            <div class="index-item active" onclick="indexpage(1)"></div>
+            <div class="index-item" onclick="indexpage(2)"></div>
+            <div class="index-item" onclick="indexpage(3)"></div>
+            <div class="index-item" onclick="indexpage(4)"></div>
+        </div>
+    </div>
+
+    <!-- movies -->
+    <div class="movies">
+        <div id="movies">
+            <div class="content-title">
+                <h1>OPENING THIS WEEK</h1>
+            </div>
+    
+            <div class="movies-contain">
+                <div class="movie-contain">
+                    <div class="movie-item">
+                        <a><img onclick="showmodal(4,1)" src="https://upload.wikimedia.org/wikipedia/en/thumb/0/01/Salinui-chueok-south-korean-movie-poster-md.jpg/220px-Salinui-chueok-south-korean-movie-poster-md.jpg" alt="" class="movie-image"></a>
+                        <div>
+                            <h5>Memories Of Murder</h5>
+                            <p>131 mins | Thriller</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="movie-contain">
+                    <div class="movie-item">
+                        <img onclick="showmodal(4,4)" src="https://m.media-amazon.com/images/M/MV5BNWE5ZjlkM2YtNjEzOS00OGY4LTkxNGYtYzFiNmMxOTg5ZjQ1XkEyXkFqcGdeQXVyNjk1Njg5NTA@._V1_.jpg" alt="" class="movie-image">
+                        <div>
+                            <h5>Shutter</h5>
+                            <p>97 mins | Thriller</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="movie-contain">
+                    <div class="movie-item">
+                        <a><img onclick="showmodal(3,1)" src="https://m.media-amazon.com/images/M/MV5BNzQzOTk3OTAtNDQ0Zi00ZTVkLWI0MTEtMDllZjNkYzNjNTc4L2ltYWdlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_.jpg" alt="" class="movie-image"></a>
+                        <div>
+                            <h5>The Matrix</h5>
+                            <p>136 mins | Sci-fi</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="movie-contain">
+                    <div class="movie-item">
+                        <img onclick="showmodal(4,2)" src="https://m.media-amazon.com/images/M/MV5BNjNhZTk0ZmEtNjJhMi00YzFlLWE1MmEtYzM1M2ZmMGMwMTU4XkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_.jpg" alt="" class="movie-image">
+                        <div>
+                            <h5>The Silence of the Lambs</h5>
+                            <p>120 mins | Thriller</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="movie-contain">
+                    <div class="movie-item">
+                        <img onclick="showmodal(3,4)" src="https://m.media-amazon.com/images/M/MV5BMTQ3NzA1MTY3MV5BMl5BanBnXkFtZTgwNzE2Mzg5MTE@._V1_.jpg" alt="" class="movie-image">
+                        <div>
+                            <h5>Snowpiercer</h5>
+                            <p>126 mins | Sci-fi</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="movie-contain">
+                    <div class="movie-item">
+                        <img onclick="showmodal(3,2)" src="https://cdn1.epicgames.com/047392e91d5e4cfdb19e2767440ab206/offer/EGS_JurassicWorldEvolutionDeluxeDinosaurPack_FrontierDevelopments_AddOn_S2-1200x1600-819bd9b9e3fe393640d00cf9ac434e64.jpg" alt="" class="movie-image">
+                        <div>
+                            <h5>Jurassic world</h5>
+                            <p>146 mins | Sci-fi</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="movie-contain">
+                    <div class="movie-item">
+                        <a><img onclick="showmodal(2,1)" src="https://images-na.ssl-images-amazon.com/images/S/pv-target-images/a936773f0c801c5bc31f5e245584e8c4ab13972101086efb347d5f94d10430e6._RI_TTW_.jpg" alt="" class="movie-image"></a>
+                        <div>
+                            <h5>Forrest Gump</h5>
+                            <p>142 mins | Comedy</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="movie-contain">
+                    <div class="movie-item">
+                        <img onclick="showmodal(2,2)" src="https://m.media-amazon.com/images/M/MV5BMTQ1OTU0ODcxMV5BMl5BanBnXkFtZTcwOTMxNTUwOA@@._V1_.jpg" alt="" class="movie-image">
+                        <div>
+                            <h5>Ted</h5>
+                            <p>112 mins | Comedy</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="movie-contain">
+                    <div class="movie-item">
+                        <a><img onclick="showmodal(1,1)" src="https://images.moviesanywhere.com/0cbb6b8561196ab07b134a62d062f639/5652a37b-ab73-4236-96ee-0fc5a80b8a1b.jpg" alt="" class="movie-image"></a>
+                        <div>
+                            <h5>The Rock</h5>
+                            <p>136 mins | Action</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="movie-contain">
+                    <div class="movie-item">
+                        <img onclick="showmodal(1,2)" src="https://m.media-amazon.com/images/M/MV5BMTk3OTcxMTEyNl5BMl5BanBnXkFtZTcwMDQ4MjQ2OQ@@._V1_.jpg" alt="" class="movie-image">
+                        <div>
+                            <h5>Escape</h5>
+                            <p>115 mins | Action</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Action -->
+    <div class="movies" id="action">
+        <div id="movies">
+            <div class="content-title">
+                <h1>ACTION</h1>
+            </div>
+    
+            <div class="movies-contain">
+                <div class="movie-contain">
+                    <div class="movie-item">
+                        <a><img onclick="showmodal(1,1)" src="https://images.moviesanywhere.com/0cbb6b8561196ab07b134a62d062f639/5652a37b-ab73-4236-96ee-0fc5a80b8a1b.jpg" alt="" class="movie-image"></a>
+                        <div>
+                            <h5>The Rock</h5>
+                            <p>136 mins | Action</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="movie-contain">
+                    <div class="movie-item">
+                        <img onclick="showmodal(1,2)" src="https://m.media-amazon.com/images/M/MV5BMTk3OTcxMTEyNl5BMl5BanBnXkFtZTcwMDQ4MjQ2OQ@@._V1_.jpg" alt="" class="movie-image">
+                        <div>
+                            <h5>Escape</h5>
+                            <p>115 mins | Action</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="movie-contain">
+                    <div class="movie-item">
+                        <img onclick="showmodal(1,3)" src="https://m.media-amazon.com/images/M/MV5BMmI3NjI5NDUtMWEyZC00OTdkLWI4ZDEtZmExNmJkYWM1Njg4XkEyXkFqcGdeQXVyMTYzMDM0NTU@._V1_.jpg" alt="" class="movie-image">
+                        <div>
+                            <h5>Con Air</h5>
+                            <p>115 mins | Action</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="movie-contain">
+                    <div class="movie-item">
+                        <img onclick="showmodal(1,4)" src="https://m.media-amazon.com/images/I/81Az82YYZaS.jpg" alt="" class="movie-image">
+                        <div>
+                            <h5>Kill Bill</h5>
+                            <p>111 mins | Action</p>
+                        </div>
+                    </div>
+                </div>
+                
+
+            </div>
+        </div>
+    </div>
+
+    <!-- comedy -->
+    <div class="movies" id="comedy">
+        <div id="movies">
+            <div class="content-title">
+                <h1>COMEDY</h1>
+            </div>
+    
+            <div class="movies-contain">
+                <div class="movie-contain">
+                    <div class="movie-item">
+                        <a><img onclick="showmodal(2,1)" src="https://shatpod.com/movies/wp-content/uploads/yE5d3BUhE8hCnkMUJOo1QDoOGNz-scaled.jpg" alt="" class="movie-image"></a>
+                        <div>
+                            <h5>Forrest Gump</h5>
+                            <p>142 mins | Comedy</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="movie-contain">
+                    <div class="movie-item">
+                        <img onclick="showmodal(2,2)" src="https://m.media-amazon.com/images/M/MV5BMTQ1OTU0ODcxMV5BMl5BanBnXkFtZTcwOTMxNTUwOA@@._V1_.jpg" alt="" class="movie-image">
+                        <div>
+                            <h5>Ted</h5>
+                            <p>112 mins | Comedy</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="movie-contain">
+                    <div class="movie-item">
+                        <img onclick="showmodal(2,3)" src="https://images.moviesanywhere.com/eebd935228b3a121b0b07c023ca5651e/92201c53-a2d7-40f9-a0c9-ae018f711cfc.jpg" alt="" class="movie-image">
+                        <div>
+                            <h5>The Hangover</h5>
+                            <p>100 mins | Comedy</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="movie-contain">
+                    <div class="movie-item">
+                        <img onclick="showmodal(2,4)" src="https://m.media-amazon.com/images/M/MV5BZDQwMjNiMTQtY2UwYy00NjhiLTk0ZWEtZWM5ZWMzNGFjNTVkXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_.jpg" alt="" class="movie-image">
+                        <div>
+                            <h5>Dumb and Dumber</h5>
+                            <p>106 mins | Comedy</p>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <!-- sci-fi -->
+    <div class="movies" id="sci-fi">
+        <div id="movies">
+            <div class="content-title">
+                <h1>SCI-FI</h1>
+            </div>
+    
+            <div class="movies-contain">
+                <div class="movie-contain">
+                    <div class="movie-item">
+                        <a><img onclick="showmodal(3,1)" src="https://m.media-amazon.com/images/M/MV5BNzQzOTk3OTAtNDQ0Zi00ZTVkLWI0MTEtMDllZjNkYzNjNTc4L2ltYWdlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_.jpg" alt="" class="movie-image"></a>
+                        <div>
+                            <h5>The Matrix</h5>
+                            <p>136 mins | Sci-Fi</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="movie-contain">
+                    <div class="movie-item">
+                        <img onclick="showmodal(3,2)" src="https://m.media-amazon.com/images/M/MV5BOTBjMjA4NmYtN2RjMi00YWZlLTliYTktOTIwMmNkYjYxYmE1XkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_.jpg" alt="" class="movie-image">
+                        <div>
+                            <h5>Jurassic world</h5>
+                            <p>146 mins | Sci-Fi</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="movie-contain">
+                    <div class="movie-item">
+                        <img onclick="showmodal(3,3)" src="https://m.media-amazon.com/images/M/MV5BMjEwOTkyOTI3M15BMl5BanBnXkFtZTcwNTQxMjU1MQ@@._V1_FMjpg_UX1000_.jpg" alt="" class="movie-image">
+                        <div>
+                            <h5>Jumper</h5>
+                            <p>88 mins | Sci-Fi</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="movie-contain">
+                    <div class="movie-item">
+                        <img onclick="showmodal(3,4)" src="https://m.media-amazon.com/images/M/MV5BMTQ3NzA1MTY3MV5BMl5BanBnXkFtZTgwNzE2Mzg5MTE@._V1_.jpg" alt="" class="movie-image">
+                        <div>
+                            <h5>Snowpiercer</h5>
+                            <p>126 mins | Sci-Fi</p>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Thriller -->
+    <div class="movies" id="thriller">
+        <div id="movies">
+            <div class="content-title">
+                <h1>THRILLER</h1>
+            </div>
+    
+            <div class="movies-contain">
+                <div class="movie-contain">
+                    <div class="movie-item">
+                        <a><img onclick="showmodal(4,1)" src="https://upload.wikimedia.org/wikipedia/en/thumb/0/01/Salinui-chueok-south-korean-movie-poster-md.jpg/220px-Salinui-chueok-south-korean-movie-poster-md.jpg" alt="" class="movie-image"></a>
+                        <div>
+                            <h5>Memories Of Murder</h5>
+                            <p>131 mins | Thriller</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="movie-contain">
+                    <div class="movie-item">
+                        <img onclick="showmodal(4,2)" src="https://m.media-amazon.com/images/M/MV5BNjNhZTk0ZmEtNjJhMi00YzFlLWE1MmEtYzM1M2ZmMGMwMTU4XkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_.jpg" alt="" class="movie-image">
+                        <div>
+                            <h5>The Silence of the Lambs</h5>
+                            <p>118 mins | Thriller</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="movie-contain">
+                    <div class="movie-item">
+                        <img onclick="showmodal(4,3)" src="https://m.media-amazon.com/images/M/MV5BZDgyZmY5MmItY2I3Ny00NjA4LWFhNmItMGQ4ZGJhZDk5YjU3XkEyXkFqcGdeQXVyMTAzMDM4MjM0._V1_.jpg" alt="" class="movie-image">
+                        <div>
+                            <h5>Seven</h5>
+                            <p>127 mins | Thriller</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="movie-contain">
+                    <div class="movie-item">
+                        <img onclick="showmodal(4,4)" src="https://upload.wikimedia.org/wikipedia/en/4/45/Shutterposter.jpg" alt="" class="movie-image">
+                        <div>
+                            <h5>Shutter</h5>
+                            <p>97 mins | Thriller</p>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <!-- news -->
+    <div class="movies" id="news">
+        <div class="footer">
+
+            <div class="subscribe">
+                <h1>Subscribe</h1>
+            </div>
+
+
+            <div class="social">
+                <ul>
+                    <li><a href="https://web.facebook.com/peerapat.sattarattana/"><i class='bx bxl-facebook-circle' ></i></a></li>
+                    <li><a href="https://www.instagram.com/as_peerinnn/"><i class='bx bxl-instagram' ></i></a></li>
+                    <li><a href=""><i class='bx bxl-twitter' ></i></a></li>
+                    <li><a href = ""><i class='bx bxl-youtube'></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="cover-content">
+        <div class="content-movie">
+            <div class="video-show">
+                <div id="vi">
+                    <iframe class="image-show" id="image-show" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+                <span onclick="closepage()" style="font-size: 21px;"><i class='bx bx-x' style="transform: translateY(5px);"></i> close</span>
+                <h3 class="title-movie"></h3>
+            </div>
+
+            <div class="title">
+                <h3 class="title-movie">THE ROCK <br> ENTSCHEIDUNG AUF ALCATARZ</h3>
+                <p id="main-movie"></p>
+            </div>
+
+            <div class="movies-contain title act">
+                <div class="movie-item">
+                    <img src="" alt="" class="movie-image ac">
+                    <div>
+                        <h5 class="nac">Sir Sean Connery</h5>
+                    </div>
+                </div>
+
+                <div class="movie-item">
+                    <img src="" alt="" class="movie-image ac">
+                    <div>
+                        <h5 class="nac">Nicolas Cage</h5>
+                    </div>
+                </div>
+
+                <div class="movie-item">
+                    <img src="" alt="" class="movie-image ac">
+                    <div>
+                        <h5 class="nac">Ed Harris</h5>
+                    </div>
+                </div>
+
+                <div class="movie-item">
+                    <img src="" alt="" class="movie-image ac">
+                    <div>
+                        <h5 class="nac">Vanessa Marcil</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+<script src="./index.js"></script>
+<script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+</html>
